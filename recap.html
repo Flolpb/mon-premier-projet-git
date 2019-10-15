@@ -1,0 +1,85 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>Comment y arriver ?</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	body {
+		background-color: gray;
+	}
+	#main {
+		display: flex;
+	}
+	.titre {
+		background-color: white;
+		width: 55%;
+		border-radius: 15px;
+		box-shadow: 10px 5px 5px blue;
+		margin: 2.5% 0 0 22.5%;
+		padding: 1px;
+		text-align: center;
+		font-size: 32;
+	}
+	.tableau1 {
+		background-color: white;
+		width: 40%;
+		border-radius: 15px;
+		box-shadow: 10px 5px 5px blue;
+		margin: 2.5% 0 0 6.5%;
+		padding: 1px;
+		text-align: center;
+		font-size: 24;
+	}
+	.tableau2 {
+		background-color: white;
+		width: 40%;
+		border-radius: 15px;
+		box-shadow: 10px 5px 5px blue;
+		margin: 2.5% 0 0 6.5%;
+		padding: 1px;
+		text-align: center;
+		font-size: 24;
+	}
+</style>
+<body>
+	<div class="titre">
+		<h2><u>Liste des étapes pour la création d'un projet :<br></u></h2>
+	</div>
+
+	<div id="main">
+		<div class="tableau1">
+			<h4><mark>1) Création d'un dossier projet :<br></mark></h4>
+				mkdir Demonstration-git<br>
+			<h4><mark>2) Aller dans le dossier Demonstration-git :<br></mark></h4>
+				cd Demonstration-git<br>
+			<h4><mark>3) Initialisation du projet en git.<br></mark></h4>
+				git init<br>
+				git config --global user.name "Florent"<br>
+			<h4><mark>4) Création d'un premier fichier readme.md<br></mark></h4>
+				touch readme.md<br>
+				git add "readme.md"<br>
+				git commit -m "Ajout du fichier readme.md"<br>
+			<h4><mark>5) Insertion du fichier html dans le projet.<br></mark></h4>
+				git add "*.html"<br>
+				git commit -m "Ajout du fichier index.html"<br>
+		</div>
+		<div class="tableau2">
+			<h4><mark>6) Création d'un dépôt sur GitHub et ajout des collaborateurs du projet.<br></mark></h4>
+			<h4><mark>7) Envoyer son projet Git sur GitHub.<br></mark></h4>
+				git remote add origin "Lien vers le répertoire GitHub" (ici: https://github.com/Flolpb/Demonstration-git.git)<br>
+				git push origin master<br>
+			<h4><mark>8)La deuxième personne récupère le projet<br></mark></h4>
+				git clone "Lien vers le répertoire GitHub"  || (ici: https://github.com/Flolpb/Demonstration-git.git)<br>
+				git config --global user.name "Hervé"<br>
+			<h4><mark>9) Modification du fichier html<br></mark></h4>
+				git add --all<br>
+				git commit -m "Modification du fichier html"<br>
+				git push origin master<br>
+			<h4><mark>10) Récupération des modifications du projet à partir de la première personne<br></mark></h4>
+				git pull origin master<br>
+				git log
+		</div>
+	</div>
+</body>
+</html>
